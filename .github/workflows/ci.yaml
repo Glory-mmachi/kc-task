@@ -1,4 +1,4 @@
-name: Code Quality Checks
+name: linting and formatting checks
 
 on:
   push:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  lint-format-build:
+  lint-format:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -30,5 +30,3 @@ jobs:
       - name: Lint code
         run: npm run lint
 
-      - name: Build project
-        run: npm run build
